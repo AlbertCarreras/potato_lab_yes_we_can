@@ -1,0 +1,9 @@
+<h1>Editing Potato</h1>
+<%= form_for @potato do |f| %>
+Name <%= f.text_field :name %><br>
+Eyes <%= f.number_field :eyes %><br>
+<%= f.submit "Update Potato" %>
+<% end %>
+<%= link_to "Show", potato_path(@potato) %>
+|
+<%= link_to "Back", potatoes_path %>

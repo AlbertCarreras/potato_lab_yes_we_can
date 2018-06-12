@@ -1,0 +1,13 @@
+<h1>New Potato</h1>
+<h2><%= flash[:notice] %></h2>
+<ul>
+  <% @error.each do |e|%>
+    <li><%= e %></li>
+    <% end %>
+</ul>
+<%= form_for @potato do |f| %>
+Name <%= f.text_field :name %><br>
+Eyes <%= f.number_field :eyes %><br>
+<%= f.submit "Create Potato" %>
+<% end %>
+<%= link_to "Back", potatoes_path %>

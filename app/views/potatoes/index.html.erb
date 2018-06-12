@@ -1,0 +1,13 @@
+<h1>Potatoes</h1>
+
+<ol>
+  <% @potatoes.each do |p| %>
+  <li>
+    <%= link_to p.name, p %> <%= link_to "Edit", edit_potato_path(p) %>
+    <%= form_for p, method: "delete" do |f| %>
+    <%= f.submit "Delete" %>
+    <% end %>
+  </li>
+  <% end %>
+</ol>
+<%= link_to "New Potato", new_potato_path %>
